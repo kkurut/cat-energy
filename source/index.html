@@ -6,6 +6,10 @@
   <title>cat energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon32.ico">
+  <link rel="icon" href="./favicons/favicon32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicons/favicon152.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -14,7 +18,10 @@
     <header class="page-header">
       <div class="page-header__logo logo">
         <a class="logo-link" href="#">
-          <img class="logo-link" src="./images/logo-icon.svg" alt="cat energy logo" width="70" height="59">
+          <picture>
+            <source media="(max-width:320px)" width="33" height="38" srcset="./images/logo-header-mobile.svg">
+            <img class="logo-link" src="./images/logo-header.svg" alt="cat energy logo" width="202" height="59">
+          </picture>
         </a>
       </div>
       <nav class="page-header__nav">
@@ -33,8 +40,6 @@
           <span class="visually-hidden">кнопка открытия меню</span>
         </button>
       </nav>
-    </header>
-    <main class="page-main">
       <section class="section-promo">
         <h1 class="section-promo__title title">
           Функциональное питание для котов
@@ -42,6 +47,8 @@
         <p class="section-promo__text">Занялся собой? Займись котом!</p>
         <a class="section-promo__link" href="#">подобрать программу</a>
       </section>
+    </header>
+    <main class="page-main">
       <section class="section-catalogs">
         <div class="section-catalogs__loss-catalog">
           <h3 class="section-catalogs__title">похудение</h3>
@@ -117,7 +124,6 @@
             <div class="section-example__info-secondary">
               <span class="section-example__info-price">Затраты на питание:</span>
               <span class="section-example__info-price">15 000 РУБ.</span>
-
             </div>
           </div>
         </div>
