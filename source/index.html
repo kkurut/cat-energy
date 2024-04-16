@@ -10,11 +10,10 @@
 </head>
 
 <body class="page__body">
-  <div class="main-wrapper">
-    <header class="page-header">
+  <div class="page__main-wrapper">
+    <header class="page__header page-header">
       <div class="page-header__logo logo">
         <a class="logo-link" href="#">
-          <img class="logo-link" src="./images/logo-icon.svg" alt="cat energy logo" width="70" height="59">
         </a>
       </div>
       <nav class="page-header__nav">
@@ -33,15 +32,15 @@
           <span class="visually-hidden">кнопка открытия меню</span>
         </button>
       </nav>
-    </header>
-    <main class="page-main">
-      <section class="section-promo">
-        <h1 class="section-promo__title title">
+      <div class="page-header__promo">
+        <h1 class="page-header__title title">
           Функциональное питание для котов
         </h1>
-        <p class="section-promo__text">Занялся собой? Займись котом!</p>
-        <a class="section-promo__link" href="#">подобрать программу</a>
-      </section>
+        <p class="page-header__text">Занялся собой? Займись котом!</p>
+        <a class="page-header__link" href="#">подобрать программу</a>
+      </div>
+    </header>
+    <main class="page__main page-main">
       <section class="section-catalogs">
         <div class="section-catalogs__loss-catalog">
           <h3 class="section-catalogs__title">похудение</h3>
@@ -117,7 +116,6 @@
             <div class="section-example__info-secondary">
               <span class="section-example__info-price">Затраты на питание:</span>
               <span class="section-example__info-price">15 000 РУБ.</span>
-
             </div>
           </div>
         </div>
@@ -140,7 +138,7 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page__footer page-footer">
       <div class="page-footer__logo logo"></div>
       <div class="page-footer__social">
         <ul class="social-list">
