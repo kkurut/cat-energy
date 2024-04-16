@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page-catalog" lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -7,24 +7,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon32.ico">
-  <link rel="icon" href="./favicons/favicon32.png" type="image">
+  <link rel="icon" href="./favicons/favicon32.png" type="image/png">
   <link rel="apple-touch-icon" href="./favicons/favicon152.png" type="image/png">
   <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="page-catalog__body">
-  <div class="main-wrapper">
-    <header class="page-header">
+<body class="page__body">
+  <div class="page__main-wrapper">
+    <header class="page__header page-header page-header--background-cat">
       <div class="page-header__logo logo">
         <a class="logo-link" href="#">
           <picture>
-            <source>
-            <img class="logo-link" src="#" alt="cat energy logo" width="70" height="59" srcset="">
+            <source media="(max-width:320px)" width="33" height="38" type="image/svg+xml"
+              srcset="./images/logo-header-mobile.svg">
+            <img class="logo-link" src="./images/logo-header.svg" alt="cat energy logo" width="202" height="59">
           </picture>
         </a>
       </div>
-      <nav class="page-header__nav">
+      <nav class="header__nav">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="./index.html">главная</a>
@@ -41,7 +42,7 @@
         </button>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page__main page-main">
       <section class="section-products">
         <h1 class="section-products__title title title--primari">Каталог продукции</h1>
         <div class="product-cards">
@@ -223,7 +224,6 @@
           <input class="email-form__input input-email" type="email" name="offers-email" id="offers-email"
             placeholder="кuklachev@gmail.com">
           <button class="email-form__button button button--primary" type="button">Подписаться</button>
-
         </form>
       </section>
       <section class="section-address">
@@ -243,7 +243,7 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page__footer page-footer">
       <div class="page-footer__logo logo"></div>
       <div class="page-footer__social">
         <ul class="social-list">

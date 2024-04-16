@@ -1,3 +1,42 @@
 .page-header {
-  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 0;
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 32px;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item--active::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    left: 0px;
+    bottom: -7px;
+    background-color: $white;
+  }
+  &__link {
+    color: $white;
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &__burger-button--special {
+    display: none;
+  }
 }
