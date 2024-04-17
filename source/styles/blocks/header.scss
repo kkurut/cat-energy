@@ -15,16 +15,16 @@
   }
   &__item {
     position: relative;
-  }
-  &__item--active::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    height: 2px;
-    width: 100%;
-    left: 0px;
-    bottom: -7px;
-    background-color: $white;
+    &--active::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 2px;
+      width: 100%;
+      left: 0px;
+      bottom: -7px;
+      background-color: $white;
+    }
   }
   &__link {
     color: $white;

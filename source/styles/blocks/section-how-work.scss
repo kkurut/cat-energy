@@ -1,0 +1,91 @@
+@media (min-width: 320px) {
+  .section-how-work {
+    &__stage-one {
+      position: relative;
+      &-text::before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        display: block;
+        background: url("../../icons/natural-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 30px 32px;
+      }
+      &-text::after {
+        content: "";
+        height: 280px;
+        width: 112px;
+        display: block;
+        background: url(../../images/stage-1.svg) no-repeat center;
+        background-size: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &__stage-two-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/powder-icon.svg") $basic-green no-repeat
+        center;
+      background-size: 26px 29px;
+    }
+    &__stage-three-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/eat-icon.svg") $basic-green no-repeat center;
+      background-size: 25px 30px;
+    }
+    &__stage-four-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/time-icon.svg") $basic-green no-repeat center;
+      background-size: 26px 31px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .section-how-work {
+    &__stage-one-text::before {
+      content: "";
+      height: 60px;
+      width: 60px;
+      display: block;
+      background: url("../../icons/natural-icon.svg") $basic-green no-repeat
+        center;
+      background-size: 30px 32px;
+    }
+    &__stage-two-text::before {
+      content: "";
+      height: 60px;
+      width: 60px;
+      display: block;
+      background: url("../../icons/powder-icon.svg") $basic-green no-repeat
+        center;
+      background-size: 26px 29px;
+    }
+    &__stage-three-text::before {
+      content: "";
+      height: 60px;
+      width: 60px;
+      display: block;
+      background: url("../../icons/eat-icon.svg") $basic-green no-repeat center;
+      background-size: 25px 30px;
+    }
+    &__stage-four-text::before {
+      content: "";
+      height: 60px;
+      width: 60px;
+      display: block;
+      background: url("../../icons/time-icon.svg") $basic-green no-repeat center;
+      background-size: 26px 31px;
+    }
+  }
+}
