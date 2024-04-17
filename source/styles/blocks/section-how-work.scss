@@ -2,6 +2,7 @@
   .section-how-work {
     &__stage-one {
       position: relative;
+      height: 250px; //! временная высота
       &-text::before {
         content: "";
         height: 80px;
@@ -13,7 +14,7 @@
       }
       &-text::after {
         content: "";
-        height: 280px;
+        height: 228px;
         width: 112px;
         display: block;
         background: url(../../images/stage-1.svg) no-repeat center;
@@ -21,71 +22,132 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: -1;
       }
     }
-    &__stage-two-text::before {
-      content: "";
-      height: 80px;
-      width: 80px;
-      display: block;
-      background: url("../../icons/powder-icon.svg") $basic-green no-repeat
-        center;
-      background-size: 26px 29px;
+    &__stage-two {
+      position: relative;
+      height: 250px; //! временная высота
+      &-text::before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        display: block;
+        background: url("../../icons/powder-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 26px 29px;
+      }
+      &-text::after {
+        content: "";
+        height: 228px;
+        width: 112px;
+        display: block;
+        background: url(../../images/stage-2.svg) no-repeat center;
+        background-size: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
     }
-    &__stage-three-text::before {
-      content: "";
-      height: 80px;
-      width: 80px;
-      display: block;
-      background: url("../../icons/eat-icon.svg") $basic-green no-repeat center;
-      background-size: 25px 30px;
+    &__stage-three {
+      position: relative;
+      height: 250px; //! временная высота;
+      &-text::before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        display: block;
+        background: url("../../icons/eat-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 25px 30px;
+      }
+      &-text::after {
+        content: "";
+        height: 228px;
+        width: 112px;
+        display: block;
+        background: url(../../images/stage-3.svg) no-repeat center;
+        background-size: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
     }
-    &__stage-four-text::before {
-      content: "";
-      height: 80px;
-      width: 80px;
-      display: block;
-      background: url("../../icons/time-icon.svg") $basic-green no-repeat center;
-      background-size: 26px 31px;
+    &__stage-four {
+      position: relative;
+      height: 250px; //! временная высота
+      &-text::before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        display: block;
+        background: url("../../icons/time-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 26px 31px;
+      }
+      &-text::after {
+        content: "";
+        height: 228px;
+        width: 112px;
+        display: block;
+        background: url(../../images/stage-4.svg) no-repeat center;
+        background-size: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
     }
   }
 }
 
 @media (max-width: 320px) {
   .section-how-work {
-    &__stage-one-text::before {
-      content: "";
-      height: 60px;
-      width: 60px;
-      display: block;
-      background: url("../../icons/natural-icon.svg") $basic-green no-repeat
-        center;
-      background-size: 30px 32px;
+    &__stage-one {
+      &-text::before {
+        content: "";
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: url("../../icons/natural-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 30px 32px;
+      }
     }
-    &__stage-two-text::before {
-      content: "";
-      height: 60px;
-      width: 60px;
-      display: block;
-      background: url("../../icons/powder-icon.svg") $basic-green no-repeat
-        center;
-      background-size: 26px 29px;
+    &__stage-two {
+      &-text::before {
+        content: "";
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: url("../../icons/powder-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 26px 29px;
+      }
     }
-    &__stage-three-text::before {
-      content: "";
-      height: 60px;
-      width: 60px;
-      display: block;
-      background: url("../../icons/eat-icon.svg") $basic-green no-repeat center;
-      background-size: 25px 30px;
+    &__stage-three {
+      &-text::before {
+        content: "";
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: url("../../icons/eat-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 25px 30px;
+      }
     }
-    &__stage-four-text::before {
-      content: "";
-      height: 60px;
-      width: 60px;
-      display: block;
-      background: url("../../icons/time-icon.svg") $basic-green no-repeat center;
-      background-size: 26px 31px;
+    &__stage-four {
+      &-text::before {
+        content: "";
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: url("../../icons/time-icon.svg") $basic-green no-repeat
+          center;
+        background-size: 26px 31px;
+      }
     }
   }
 }

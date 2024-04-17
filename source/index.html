@@ -16,33 +16,37 @@
 
 <body class="page__body">
   <div class="page__main-wrapper page__main-wrapper--background-cat">
-    <header class="page__header page-header ">
-      <div class="page-header__logo logo">
-        <a class="logo-link" href="#">
-          <picture>
-            <source media="(max-width:320px)" width="33" height="38" srcset="./images/logo-header-mobile.svg">
-            <img class="logo-link" src="./images/logo-header.svg" alt="cat energy logo" width="202" height="59">
-          </picture>
-        </a>
+    <header class="header header--background-cat">
+      <div class="page__centering-wraper centering-wraper">
+        <div class="page-header ">
+          <div class="page-header__logo logo">
+            <a class="logo-link" href="#">
+              <picture>
+                <source media="(max-width:320px)" width="33" height="38" srcset="./images/logo-header-mobile.svg">
+                <img class="logo-link" src="./images/logo-header.svg" alt="cat energy logo" width="202" height="59">
+              </picture>
+            </a>
+          </div>
+          <nav class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item page-header__item--active">
+                <a class="page-header__link" href="./index.html">главная</a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="./catalog.html">Каталог продукции</a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="#">подбор программы</a>
+              </li>
+            </ul>
+            <button class="page-header__burger-button page-header__burger-button--special" type="button">
+              <span class="visually-hidden">кнопка открытия меню</span>
+            </button>
+          </nav>
+        </div>
       </div>
-      <nav class="page-header__nav">
-        <ul class="page-header__list">
-          <li class="page-header__item page-header__item--active">
-            <a class="page-header__link" href="./index.html">главная</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="./catalog.html">Каталог продукции</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="#">подбор программы</a>
-          </li>
-        </ul>
-        <button class="page-header__burger-button page-header__burger-button--special" type="button">
-          <span class="visually-hidden">кнопка открытия меню</span>
-        </button>
-      </nav>
     </header>
-    <main class="page__main page-main">
+    <main class="page-main">
       <section class="section-promo">
         <h1 class="section-promo__title title">
           Функциональное питание для котов
@@ -147,16 +151,22 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
-    <footer class="page__footer page-footer">
-      <div class="page-footer__logo logo"></div>
-      <div class="page-footer__social">
-        <ul class="social-list">
-          <li class="social-list__item"></li>
-          <li class="social-list__item"></li>
-          <li class="social-list__item"></li>
-        </ul>
+    <footer class="page-footer">
+      <div class="page__centering-wraper centering-wraper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link" href="./index.html">
+            <img src="./images/logo-footer.svg" alt="логотип cat energy" width="128" height="24">
+          </a>
+        </div>
+        <div class="page-footer__social">
+          <ul class="social-list">
+            <li class="social-list__item"></li>
+            <li class="social-list__item"></li>
+            <li class="social-list__item"></li>
+          </ul>
+        </div>
+        <div class="page-footer__html">HTML Academy</div>
       </div>
-      <div class="page-footer__html">HTML Academy</div>
     </footer>
   </div>
 </body>
