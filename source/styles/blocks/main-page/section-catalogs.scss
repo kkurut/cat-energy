@@ -1,5 +1,10 @@
 @media (min-width: 768px) {
-  .section-catalogs {
+  .catalogs {
+    display: flex;
+    justify-content: center;
+    .centering-wraper {
+      margin: 0 110px;
+    }
     &__title--cat-shadow::before {
       content: "";
       width: 100px;
@@ -7,6 +12,7 @@
       display: block;
       background: url("../../images/cat-shadow.svg") no-repeat;
     }
+
     &__title--tiger-shadow::before {
       content: "";
       width: 134px;
@@ -18,7 +24,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .section-catalogs {
+  .catalogs {
     &__title--cat-shadow::before {
       content: "";
       width: 200px;
@@ -26,6 +32,7 @@
       display: block;
       background: url("../../images/cat-shadow.svg") no-repeat;
     }
+
     &__title--tiger-shadow::before {
       content: "";
       width: 268px;
@@ -37,7 +44,7 @@
 }
 
 @media (max-width: 320px) {
-  .section-catalogs {
+  .catalogs {
     &__title--cat-shadow::before {
       content: "";
       width: 50px;
@@ -45,6 +52,7 @@
       display: block;
       background: url("../../images/cat-shadow.svg") no-repeat;
     }
+
     &__title--tiger-shadow::before {
       content: "";
       width: 67px;

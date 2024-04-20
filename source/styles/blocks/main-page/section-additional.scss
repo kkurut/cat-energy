@@ -1,0 +1,27 @@
+.additional {
+  &__promo-card {
+    width: 245px;
+    height: 288px;
+    background: url("../../images/gift-background@1x.png") no-repeat;
+    background-size: 245px 288px;
+    position: relative;
+    z-index: -1;
+    &-text::before {
+      content: "";
+      width: 80px;
+      height: 83px;
+      display: block;
+      background: url(../../icons/icon-gift.svg);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 245px;
+      height: 288px;
+      display: block;
+      background-color: $background-green;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
