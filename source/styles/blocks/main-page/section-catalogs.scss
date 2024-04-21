@@ -1,0 +1,66 @@
+@media (min-width: 768px) {
+  .catalogs {
+    display: flex;
+    justify-content: center;
+
+    .centering-wraper {
+      margin: 0 110px;
+    }
+
+    &__title--cat-shadow::before {
+      content: "";
+      width: 100px;
+      height: 106px;
+      display: block;
+      background: url("../../images/cat-shadow.svg") no-repeat;
+    }
+
+    &__title--tiger-shadow::before {
+      content: "";
+      width: 134px;
+      height: 100px;
+      display: block;
+      background: url("../../images/tiger-shadow.svg") no-repeat;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .catalogs {
+    &__title--cat-shadow::before {
+      content: "";
+      width: 200px;
+      height: 211px;
+      display: block;
+      background: url("../../images/cat-shadow.svg") no-repeat;
+    }
+
+    &__title--tiger-shadow::before {
+      content: "";
+      width: 268px;
+      height: 200px;
+      display: block;
+      background: url("../../images/tiger-shadow.svg") no-repeat;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .catalogs {
+    &__title--cat-shadow::before {
+      content: "";
+      width: 50px;
+      height: 53px;
+      display: block;
+      background: url("../../images/cat-shadow.svg") no-repeat;
+    }
+
+    &__title--tiger-shadow::before {
+      content: "";
+      width: 67px;
+      height: 50px;
+      display: block;
+      background: url("../../images/tiger-shadow.svg") no-repeat;
+    }
+  }
+}

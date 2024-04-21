@@ -1,0 +1,43 @@
+.page-footer {
+  min-height: 169px;
+  display: flex;
+  justify-content: center;
+  background-color: $basic_grey;
+
+  .centering-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+
+    &__link--vk {
+      display: block;
+      width: 52px;
+      height: 37px;
+      background: url("../../icons/vk-icon.svg") no-repeat center;
+      background-size: 28px 22px;
+    }
+
+    &__link--youtube {
+      display: block;
+      width: 52px;
+      height: 37px;
+      background: url("../../icons/youtube-icon.svg") no-repeat center;
+      background-size: 28px 22px;
+    }
+
+    &__link--telegram {
+      display: block;
+      width: 52px;
+      height: 37px;
+      background: url("../../icons/telegram-icon.svg") no-repeat center;
+      background-size: 28px 22px;
+    }
+  }
+}
