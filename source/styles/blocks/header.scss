@@ -47,6 +47,7 @@
       text-transform: uppercase;
     }
   }
+
   &__burger-button--special {
     display: none;
   }
@@ -80,16 +81,15 @@
   .page-header--background-cat::after {
     top: 0;
     background-image: url("../../images/main-back-cat@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/main-back-cat@2x.jpg");
-    }
-
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $background-green;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/main-back-cat@2x.jpg");
+    }
   }
 }
 
@@ -133,15 +133,13 @@
     top: 0;
     background-image: url("../../images/main-back-cat@1x.jpg");
     background-position: center;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/main-back-cat@2x.jpg");
-    }
-
-    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $background-green;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/main-back-cat@2x.jpg");
+    }
   }
 }

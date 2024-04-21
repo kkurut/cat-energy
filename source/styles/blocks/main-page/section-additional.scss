@@ -6,13 +6,15 @@
     background-size: 245px 288px;
     position: relative;
     z-index: -1;
+
     &-text::before {
       content: "";
       width: 80px;
       height: 83px;
       display: block;
-      background: url(../../icons/icon-gift.svg);
+      background: url("../../icons/icon-gift.svg");
     }
+
     &::after {
       position: absolute;
       content: "";

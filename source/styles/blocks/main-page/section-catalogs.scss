@@ -2,9 +2,11 @@
   .catalogs {
     display: flex;
     justify-content: center;
+
     .centering-wraper {
       margin: 0 110px;
     }
+
     &__title--cat-shadow::before {
       content: "";
       width: 100px;
