@@ -1,0 +1,16 @@
+.title--primari {
+  font: {
+    family: "Oswald", sans-serif;
+    size: 36px;
+    style: normal;
+    weight: 400;
+    height: 36px;
+  }
+
+  @media (min-width:768px) {
+    & {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+}

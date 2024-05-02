@@ -5,11 +5,16 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/page__body.scss";
 @import "./blocks/header";
 @import "./blocks/footer.scss";
 @import "./blocks/page.scss";
 @import "./blocks/centering-wraper.scss";
 @import "./blocks/visually-hiden.scss";
+@import "./blocks/title.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/background-cat.scss";
+@import "./blocks/button.scss";
 
 //* ГЛАВНАЯ СТРАНИЦА
 

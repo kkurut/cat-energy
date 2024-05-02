@@ -1,11 +1,27 @@
 .page-header {
   display: flex;
   justify-content: center;
-  min-height: 59px;
+  min-height: 39px;
+  background-color: $white;
 
   .centering-wraper {
-    margin: 0 110px;
+    margin: 12px 20px 12px;
     display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      margin: 25px 30px 0;
+    }
+
+    @media (min-width: 1440px) {
+      margin: 55px 110px 0;
+    }
+  }
+
+  &__logo {
+    min-width: 68%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -15,131 +31,95 @@
   }
 
   &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 32px;
-
-    &-item {
-      position: relative;
-    }
-
-    &-item--active::after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      height: 2px;
-      width: 100%;
-      left: 0;
-      bottom: -7px;
-      background-color: $white;
-    }
-
-    &-link {
-      color: $white;
-      font-family: "oswald", sans-serif;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+    display: none;
   }
 
-  &__burger-button--special {
-    display: none;
+  &__burger-button {
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("../../icons/burger-btn.svg");
   }
 
   &__close-button--special {
     display: none;
   }
-}
 
-@media (min-width: 768px) {
-  .page-header {
-    position: relative;
-  }
+  @media (min-width: 768px) {
 
-  .page-header--background-cat::after,
-  .page-header--background-cat::before {
-    content: "";
-    width: 50%;
-    height: 694px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: $background-green;
-  }
-
-  .page-header--background-cat::before {
-    background-color: $background-green;
-    z-index: -1;
-  }
-
-  .page-header--background-cat::after {
-    top: 0;
-    background-image: url("../../images/main-back-cat@1x.jpg");
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $background-green;
-    z-index: -2;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/main-back-cat@2x.jpg");
+    & {
+      background: none;
     }
-  }
-}
-
-@media (max-width: 320px) {
-  .page-header {
-    position: relative;
-    background-color: $white;
 
     &__list {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 32px;
+
+      &-item {
+        position: relative;
+      }
+
+      &-item--active::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: -7px;
+        background-color: $basic-green;
+      }
+
+      &-link {
+        color: $black;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    &__logo {
+      min-width: 174px;
+      gap: 13px;
+    }
+    .page-header__list-link {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__burger-button--special {
       display: none;
     }
 
-    &__burger-button {
-      display: block;
-      border: none;
-      width: 24px;
-      height: 24px;
-      background-color: transparent;
-      background-image: url("../../images/burger-btn.svg");
+  }
+
+  @media (min-width:1440px) {
+    &__list-link {
+      color: $white;
+    }
+
+    &__list-item--active::after {
+      background-color: $white;
+    }
+
+    &__logo {
+      min-width: 202px;
+      gap: 14px;
     }
   }
 
-  .page-header--background-cat::after,
-  .page-header--background-cat::before {
-    content: "";
-    width: 100%;
-    height: 302px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    background-color: $background-green;
-  }
-
-  .page-header--background-cat::before {
-    background-color: $background-green;
-    z-index: -1;
-  }
-
-  .page-header--background-cat::after {
-    top: 0;
-    background-image: url("../../images/main-back-cat@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $background-green;
-    z-index: -2;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/main-back-cat@2x.jpg");
+  //! модификаторы
+  .page--catalog {
+    .page-header__list-item--active::after {
+      background-color: $basic-green;
     }
   }
 }

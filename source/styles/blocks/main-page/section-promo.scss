@@ -2,7 +2,27 @@
   display: flex;
   justify-content: center;
 
-  .centering-wraper {
-    margin: 0 110px;
+  &__title {
+    color: $white;
+  }
+
+  &__text {
+    color: $white;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  @media (min-width:768px) {
+
+    &__text {
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
   }
 }

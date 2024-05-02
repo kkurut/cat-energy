@@ -5,9 +5,18 @@
   background-color: $basic_grey;
 
   .centering-wraper {
+    margin: 0 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      margin: 0 30px;
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+      margin: 0 20px;
+    }
   }
 
   .social-list {
@@ -16,28 +25,10 @@
     padding-left: 0;
     display: flex;
 
-    &__link--vk {
+    &__link {
       display: block;
-      width: 52px;
-      height: 37px;
-      background: url("../../icons/vk-icon.svg") no-repeat center;
-      background-size: 28px 22px;
-    }
-
-    &__link--youtube {
-      display: block;
-      width: 52px;
-      height: 37px;
-      background: url("../../icons/youtube-icon.svg") no-repeat center;
-      background-size: 28px 22px;
-    }
-
-    &__link--telegram {
-      display: block;
-      width: 52px;
-      height: 37px;
-      background: url("../../icons/telegram-icon.svg") no-repeat center;
-      background-size: 28px 22px;
+      width: 28px;
+      height: 22px;
     }
   }
 }

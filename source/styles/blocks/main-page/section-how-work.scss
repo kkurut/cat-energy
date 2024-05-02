@@ -1,125 +1,82 @@
-@media (min-width: 320px) {
-  .how-work {
-    display: flex;
-    justify-content: center;
+.how-work {
+  display: flex;
+  justify-content: center;
 
-    &__stage--one {
-      position: relative;
-      height: 250px; //! временная высота
+  &__stage--one {
+    position: relative;
+    height: 250px; //! временная высота
+    background: url("../../images/stage-1.svg") no-repeat center;
+    background-size: 71px 230px;
 
-      .how-work__stage-text::before {
-        content: "";
-        height: 80px;
-        width: 80px;
-        display: block;
-        background: url("../../icons/natural-icon.svg") $basic-green no-repeat;
-        background-position: center;
-        background-size: 30px 32px;
-      }
+    .how-work__stage-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/natural-icon.svg") $basic-green no-repeat;
+      background-position: center;
+      background-size: 30px 32px;
+    }
+  }
 
-      .how-work__stage-text::after {
-        content: "";
-        height: 228px;
-        width: 112px;
-        display: block;
-        background: url("../../images/stage-1.svg") no-repeat center;
-        background-size: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-      }
+  &__stage--two {
+    position: relative;
+    height: 250px; //! временная высота
+    background: url("../../images/stage-2.svg") no-repeat center;
+    background-size: 113px 230px;
+
+    .how-work__stage-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/powder-icon.svg") $basic-green no-repeat;
+      background-position: center;
+      background-size: 26px 29px;
+    }
+  }
+
+  &__stage--three {
+    position: relative;
+    height: 250px; //! временная высота;
+    background: url("../../images/stage-3.svg") no-repeat center;
+    background-size: 113px 232px;
+
+    .how-work__stage-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/eat-icon.svg") $basic-green no-repeat;
+      background-position: center;
+      background-size: 25px 30px;
+    }
+  }
+
+  &__stage--four {
+    position: relative;
+    height: 250px; //! временная высота
+    background: url("../../images/stage-4.svg") no-repeat center;
+    background-size: 121px 226px;
+
+    .how-work__stage-text::before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      background: url("../../icons/time-icon.svg") $basic-green no-repeat;
+      background-position: center;
+      background-size: 26px 31px;
     }
 
-    &__stage--two {
-      position: relative;
-      height: 250px; //! временная высота
-
-      .how-work__stage-text::before {
-        content: "";
-        height: 80px;
-        width: 80px;
-        display: block;
-        background: url("../../icons/powder-icon.svg") $basic-green no-repeat;
-        background-position: center;
-        background-size: 26px 29px;
-      }
-
-      .how-work__stage-text::after {
-        content: "";
-        height: 228px;
-        width: 112px;
-        display: block;
-        background: url("../../images/stage-2.svg") no-repeat center;
-        background-size: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-      }
-    }
-
-    &__stage--three {
-      position: relative;
-      height: 250px; //! временная высота;
-
-      .how-work__stage-text::before {
-        content: "";
-        height: 80px;
-        width: 80px;
-        display: block;
-        background: url("../../icons/eat-icon.svg") $basic-green no-repeat;
-        background-position: center;
-        background-size: 25px 30px;
-      }
-
-      .how-work__stage-text::after {
-        content: "";
-        height: 228px;
-        width: 112px;
-        display: block;
-        background: url("../../images/stage-3.svg") no-repeat center;
-        background-size: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-      }
-    }
-
-    &__stage--four {
-      position: relative;
-      height: 250px; //! временная высота
-
-      .how-work__stage-text::before {
-        content: "";
-        height: 80px;
-        width: 80px;
-        display: block;
-        background: url("../../icons/time-icon.svg") $basic-green no-repeat;
-        background-position: center;
-        background-size: 26px 31px;
-      }
-
-      .how-work__stage-text::after {
-        content: "";
-        height: 228px;
-        width: 112px;
-        display: block;
-        background: url("../../images/stage-4.svg") no-repeat center;
-        background-size: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-      }
-    }
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .how-work {
     &__stage--one {
+      background: none;
+
       .how-work__stage-text::before {
         content: "";
         height: 60px;
@@ -132,6 +89,8 @@
     }
 
     &__stage--two {
+      background: none;
+
       .how-work__stage-text::before {
         content: "";
         height: 60px;
@@ -144,6 +103,8 @@
     }
 
     &__stage--three {
+      background: none;
+
       .how-work__stage-text::before {
         content: "";
         height: 60px;
@@ -156,6 +117,8 @@
     }
 
     &__stage--four {
+      background: none;
+
       .how-work__stage-text::before {
         content: "";
         height: 60px;
