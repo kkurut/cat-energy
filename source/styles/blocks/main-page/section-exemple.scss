@@ -1,4 +1,105 @@
 .example {
   display: flex;
   justify-content: center;
+  padding: 25px 0 40px;
+  background-color: $basic-light-gray;
+
+  &__text {
+    color: $basic-dark-gray;
+    font-family: "lato", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__info-primary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__info-caption {
+    background-color: $basic-light-gray;
+    position: absolute;
+  }
+
+  &__info-text {
+    padding: 10px;
+    min-width: 124px;
+    min-height: 56px;
+    border: 2px solid $basic-special-gray;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__info-caption {
+    color: $basic-dark-gray;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  &__info-price {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+
+      &-primary {
+        gap: 43px;
+      }
+    &-text {
+      min-width: 162px;
+      min-height: 72px;
+      font-size: 30px;
+      line-height: 37px;
+    }
+    &-caption {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &-price {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+
+    .centering-wraper {
+      display: flex;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+
+      &-primary {
+        gap: 42px;
+        justify-content: left;
+      }
+    }
+  }
 }

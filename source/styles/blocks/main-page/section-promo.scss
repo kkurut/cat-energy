@@ -4,6 +4,7 @@
 
   &__title {
     color: $white;
+    font-weight: 400;
   }
 
   &__text {
@@ -17,12 +18,28 @@
     text-decoration: none;
   }
 
+  //! планшетная версия
+
   @media (min-width:768px) {
+    &__title {
+      color: $black;
+    }
 
     &__text {
+      color: black;
       font-size: 20px;
       line-height: 20px;
       text-transform: uppercase;
     }
+
+    &__link {
+      font-size: 20px;
+      line-height: 26px;
+      width: 244px;
+    }
   }
+
+  //! компьютерная версия
+
+  @media (min-width:1449px) {}
 }

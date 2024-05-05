@@ -1,13 +1,24 @@
 .page-header {
+  position: relative;
   display: flex;
   justify-content: center;
   min-height: 39px;
   background-color: $white;
 
+
+    //! шапка в каталоге
+    .page--catalog {
+
+      .page-header__list-link {
+        color: $black;
+      }
+
+      .page-header__list-item--active::after {
+        background-color: $basic-green;
+      }
+    }
   .centering-wraper {
     margin: 12px 20px 12px;
-    display: flex;
-    justify-content: space-between;
 
     @media (min-width: 768px) and (max-width: 1440px) {
       margin: 25px 30px 0;
@@ -19,6 +30,7 @@
   }
 
   &__logo {
+    grid-area: logo;
     min-width: 68%;
     display: flex;
     align-items: center;
@@ -26,15 +38,50 @@
   }
 
   &__nav {
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-areas:
+      "logo btn"
+      "nav nav";
   }
 
   &__list {
-    display: none;
+    grid-area: nav;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+    background-color: $white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      padding: 22px 50px 24px 50px;
+      border-bottom: 1px solid $basic-light-gray2;
+    }
+
+    &-item:first-child {
+      border-top: 1px solid $basic-light-gray2;
+    }
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      color: $black;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
   }
 
   &__burger-button {
+    grid-area: btn;
+    justify-self: end;
     border: none;
     width: 24px;
     height: 24px;
@@ -42,26 +89,68 @@
     background-image: url("../../icons/burger-btn.svg");
   }
 
-  &__close-button--special {
+  &__close-button {
+    grid-area: btn;
+    justify-self: end;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("../../icons/close-menu-btn.svg");
+  }
+
+  .page-header__list--hide {
+    display: none;
+  }
+
+  .page-header__burger-button--special {
+    display: none;
+  }
+
+  .page-header__close-button--special {
     display: none;
   }
 
   @media (min-width: 768px) {
 
+    .page-header__list--hide {
+      display: flex;
+    }
+
+
     & {
       background: none;
     }
 
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &__list {
-      display: block;
+      position: static;
+      background-color: transparent;
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       gap: 32px;
 
+
+    &-link {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
       &-item {
+        padding: 0;
+        border: none;
         position: relative;
+      }
+
+      &-item:first-child {
+        border: none;
       }
 
       &-item--active::after {
@@ -74,52 +163,39 @@
         bottom: -7px;
         background-color: $basic-green;
       }
-
-      &-link {
-        color: $black;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
     }
 
     &__logo {
       min-width: 174px;
       gap: 13px;
     }
-    .page-header__list-link {
-      font-size: 18px;
-      line-height: 24px;
+
+
+    &__burger-button {
+      display: none;
     }
 
-    &__burger-button--special {
+    &__close-button {
       display: none;
     }
 
   }
 
   @media (min-width:1440px) {
-    &__list-link {
+
+    .page-header__list-link {
       color: $white;
     }
 
-    &__list-item--active::after {
+    .page-header__list-item--active::after {
       background-color: $white;
     }
 
-    &__logo {
+    .page-header__logo {
       min-width: 202px;
       gap: 14px;
     }
+
   }
 
-  //! модификаторы
-  .page--catalog {
-    .page-header__list-item--active::after {
-      background-color: $basic-green;
-    }
-  }
 }

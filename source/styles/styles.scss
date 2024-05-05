@@ -5,7 +5,6 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
-@import "./blocks/page__body.scss";
 @import "./blocks/header";
 @import "./blocks/footer.scss";
 @import "./blocks/page.scss";
@@ -15,12 +14,25 @@
 @import "./blocks/logo.scss";
 @import "./blocks/background-cat.scss";
 @import "./blocks/button.scss";
+@import "./blocks/section-address.scss";
+@import "./blocks/product-card.scss";
 
 //* ГЛАВНАЯ СТРАНИЦА
 
 @import "./blocks/main-page/section-promo.scss";
 @import "./blocks/main-page/section-catalogs.scss";
 @import "./blocks/main-page/section-how-work.scss";
-@import "./blocks/main-page/section-additional.scss";
 @import "./blocks/main-page/section-exemple.scss";
-@import "./blocks/main-page/section-address.scss";
+
+//* СТРАНИЦА КАТАЛОГА
+
+@import "./blocks/catalog-page/section-products.scss";
+@import "./blocks/catalog-page/section-additional.scss";
+@import "./blocks/catalog-page/section-offers.scss";
+@import "./blocks/catalog-page/section-address.scss";
+
+
+/*!
+ЕСЛИ КАКОЙ-ТО БЛОК ПЕРЕИСПОЛЬУЕТСЯ ТО ВЫНОСИМ В "BLOCKS",
+А ЕСЛИ НЕТ ТО ОСТАВЛЯЕМ НА СТРАНИЦЕ
+*/

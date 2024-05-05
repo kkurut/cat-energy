@@ -13,9 +13,15 @@
     flex-grow: 1;
   }
 
-  .map {
-    @media (max-width: 320px) {
-      width: 320px;
-    }
+}
+
+.page--catalog {
+
+  .page-header__list-link {
+    color: $black;
+  }
+
+  .page-header__list-item--active::after {
+    background-color: $basic-green;
   }
 }
