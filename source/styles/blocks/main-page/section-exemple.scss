@@ -72,6 +72,7 @@
   @media (min-width: 768px) {
     position: relative;
     background-color: transparent;
+
     &::after {
       position: absolute;
       right: 0;
@@ -116,16 +117,13 @@
       line-height: 20px;
     }
 
-    .example__text {
-      font-size: 16px;
-      line-height: 24px;
-    }
   }
 
   @media (min-width: 1440px) {
     .example__caption {
       width: 50%;
     }
+
     .example__title {
       margin-bottom: 146px;
     }
