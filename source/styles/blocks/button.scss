@@ -1,17 +1,18 @@
-.button--primary {
-  border: none;
-  color: $white;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background-color: $basic-green;
-  display: flex;
-  justify-content: center;
-  padding: 10px 25px;
-}
+.button {
+  &--primary {
+    border: none;
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: $basic-green;
+    display: flex;
+    justify-content: center;
+    padding: 10px 25px;
+  }
 
-.button--secondary {
+  &--secondary {
     border: none;
     color: $white;
     text-align: center;
@@ -23,4 +24,5 @@
     justify-content: center;
     align-items: center;
     padding: 10px 25px;
+  }
 }

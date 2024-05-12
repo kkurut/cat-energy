@@ -5,9 +5,9 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header";
 @import "./blocks/footer.scss";
-@import "./blocks/page.scss";
 @import "./blocks/centering-wraper.scss";
 @import "./blocks/visually-hiden.scss";
 @import "./blocks/title.scss";
@@ -16,6 +16,8 @@
 @import "./blocks/button.scss";
 @import "./blocks/section-address.scss";
 @import "./blocks/product-card.scss";
+@import "./blocks/more-product-card.scss";
+@import "./blocks/html-academy.scss";
 
 //* ГЛАВНАЯ СТРАНИЦА
 
@@ -30,9 +32,3 @@
 @import "./blocks/catalog-page/section-additional.scss";
 @import "./blocks/catalog-page/section-offers.scss";
 @import "./blocks/catalog-page/section-address.scss";
-
-
-/*!
-ЕСЛИ КАКОЙ-ТО БЛОК ПЕРЕИСПОЛЬУЕТСЯ ТО ВЫНОСИМ В "BLOCKS",
-А ЕСЛИ НЕТ ТО ОСТАВЛЯЕМ НА СТРАНИЦЕ
-*/

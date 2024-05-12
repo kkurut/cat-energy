@@ -2,44 +2,40 @@
   display: flex;
   justify-content: center;
 
-  &__title {
+  .promo__title {
     color: $white;
     font-weight: 400;
   }
 
-  &__text {
+  .promo__text {
     color: $white;
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
   }
 
-  &__link {
+  .promo__link {
     text-decoration: none;
   }
 
   //! планшетная версия
 
-  @media (min-width:768px) {
-    &__title {
+  @media (min-width: 768px) {
+    .promo__title {
       color: $black;
     }
 
-    &__text {
-      color: black;
+    .promo__text {
+      color: $black;
       font-size: 20px;
       line-height: 20px;
       text-transform: uppercase;
     }
 
-    &__link {
+    .promo__link {
       font-size: 20px;
       line-height: 26px;
       width: 244px;
     }
   }
-
-  //! компьютерная версия
-
-  @media (min-width:1449px) {}
 }

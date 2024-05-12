@@ -1,26 +1,25 @@
 .products {
   display: flex;
   justify-content: center;
-  &__cards {
+
+  .products__cards {
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
   @media (min-width: 768px) {
-
-    &__cards {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 60px;
+    .products__cards {
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      gap: 60px;
     }
   }
 
-  @media (min-width:1440px) {
-    &__cards {
-    gap: 80px;
+  @media (min-width: 1440px) {
+    .products__cards {
+      gap: 80px;
     }
   }
-
 }
