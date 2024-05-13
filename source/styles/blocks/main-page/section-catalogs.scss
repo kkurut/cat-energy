@@ -1,66 +1,150 @@
-@media (min-width: 768px) {
-  .catalogs {
+.catalogs {
+  display: flex;
+  justify-content: center;
+
+  .centering-wraper {
     display: flex;
-    justify-content: center;
-
-    .centering-wraper {
-      margin: 0 110px;
-    }
-
-    &__title--cat-shadow::before {
-      content: "";
-      width: 100px;
-      height: 106px;
-      display: block;
-      background: url("../../images/cat-shadow.svg") no-repeat;
-    }
-
-    &__title--tiger-shadow::before {
-      content: "";
-      width: 134px;
-      height: 100px;
-      display: block;
-      background: url("../../images/tiger-shadow.svg") no-repeat;
-    }
+    flex-direction: column;
+    gap: 20px;
   }
-}
 
-@media (min-width: 320px) and (max-width: 768px) {
-  .catalogs {
-    &__title--cat-shadow::before {
-      content: "";
-      width: 200px;
-      height: 211px;
-      display: block;
-      background: url("../../images/cat-shadow.svg") no-repeat;
-    }
-
-    &__title--tiger-shadow::before {
-      content: "";
-      width: 268px;
-      height: 200px;
-      display: block;
-      background: url("../../images/tiger-shadow.svg") no-repeat;
-    }
+  .catalogs__catalog {
+    padding: 21px 20px 18px;
+    background-color: $basic-gray;
+    display: grid;
+    grid-template-areas:
+      "title icon"
+      "text  icon"
+      "link  icon";
   }
-}
 
-@media (max-width: 320px) {
-  .catalogs {
-    &__title--cat-shadow::before {
+  .catalogs__title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    &--cat::before {
       content: "";
       width: 50px;
       height: 53px;
       display: block;
-      background: url("../../images/cat-shadow.svg") no-repeat;
+      background: url("../../icons/cat-shadow.svg") no-repeat;
     }
 
-    &__title--tiger-shadow::before {
+    &--strong-cat::before {
       content: "";
       width: 67px;
       height: 50px;
       display: block;
-      background: url("../../images/tiger-shadow.svg") no-repeat;
+      background: url("../../icons/tiger-shadow.svg") no-repeat;
+    }
+  }
+
+  .catalogs__text {
+    grid-area: text;
+    color: $basic-dark-gray;
+    font-family: "lato", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .catalogs__link {
+    grid-area: link;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 10px;
+      mask-image: url("../../icons/icon-arrow.svg");
+      mask-repeat: no-repeat;
+      background-color: $black;
+    }
+  }
+
+  //! планшетная и компьютерная версия
+  @media (min-width: 768px) {
+    .catalogs__title {
+      font-size: 36px;
+      line-height: 36px;
+      text-transform: uppercase;
+
+      &--cat::before {
+        display: none;
+      }
+
+      &--strong-cat::before {
+        display: none;
+      }
+    }
+
+    .catalogs__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .catalogs__link {
+      font-size: 20px;
+      line-height: normal;
+    }
+
+    .catalogs__catalog {
+      &--cat::after {
+        grid-area: icon;
+        content: "";
+        width: 200px;
+        height: 211px;
+        display: block;
+        background: url("../../icons/cat-shadow.svg") no-repeat;
+      }
+
+      &--strong-cat::after {
+        grid-area: icon;
+        content: "";
+        width: 268px;
+        height: 200px;
+        display: block;
+        background: url("../../icons/tiger-shadow.svg") no-repeat;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .catalogs__catalog {
+      &--cat::after,
+      &--strong-cat::after {
+        display: none;
+      }
+    }
+
+    .catalogs__title {
+      &--cat::before {
+        content: "";
+        width: 100px;
+        height: 106px;
+        display: block;
+        background: url("../../icons/cat-shadow.svg") no-repeat;
+      }
+
+      &--strong-cat::before {
+        content: "";
+        width: 134px;
+        height: 100px;
+        display: block;
+        background: url("../../icons/tiger-shadow.svg") no-repeat;
+      }
     }
   }
 }

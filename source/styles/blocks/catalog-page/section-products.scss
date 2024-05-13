@@ -1,0 +1,25 @@
+.products {
+  display: flex;
+  justify-content: center;
+
+  .products__cards {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 768px) {
+    .products__cards {
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .products__cards {
+      gap: 80px;
+    }
+  }
+}

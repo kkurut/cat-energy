@@ -1,0 +1,26 @@
+.more-product-card {
+  .more-product-card__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .more-product-card__caption {
+    margin: 0;
+    color: $basic-dark-gray;
+    font-family: "lato", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .more-product-card__more-button {
+    border: none;
+    background-color: $basic-gray;
+    color: $basic-dark-gray;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
