@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="./favicons/favicon152.png">
   <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c5948696-c542-4bac-a474-f4c577937a1b" defer></script>
+  <script src="scripts/castom-map.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -194,19 +196,20 @@
         </div>
       </div>
     </section>
+    <div class="map" id="map"></div>
   </main>
   <footer class="page-footer">
     <div class="centering-wraper">
-      <ul>
-        <li>
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
           <a class="page-footer__logo logo" href="./index.html">
             <img class="logo__cat-energy" src="./images/logo-cat-energy.svg" alt="логотип cat energy" width="128"
               height="24">
             <span class="visually-hidden">логотип cat energy</span>
           </a>
         </li>
-        <li>
-          <ul class="social-list">
+        <li class="page-footer__item">
+          <ul class="page-footer__social social-list">
             <li class="social-list__item">
               <a class="social-list__link social-list__link--vk" href="#">
                 <span class="visually-hidden">ссылка вк</span>
@@ -224,7 +227,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="page-footer__item">
           <a class="html-academy" href="#">
             <p class="html-academy__text">HTML Academy</p>
           </a>

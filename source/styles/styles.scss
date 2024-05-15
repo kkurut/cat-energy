@@ -4,21 +4,6 @@
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 
-/* BLOCKS */
-@import "./blocks/page.scss";
-@import "./blocks/header";
-@import "./blocks/footer.scss";
-@import "./blocks/centering-wraper.scss";
-@import "./blocks/visually-hiden.scss";
-@import "./blocks/title.scss";
-@import "./blocks/logo.scss";
-@import "./blocks/background-cat.scss";
-@import "./blocks/button.scss";
-@import "./blocks/section-address.scss";
-@import "./blocks/product-card.scss";
-@import "./blocks/more-product-card.scss";
-@import "./blocks/html-academy.scss";
-
 //* ГЛАВНАЯ СТРАНИЦА
 
 @import "./blocks/main-page/section-promo.scss";
@@ -32,3 +17,20 @@
 @import "./blocks/catalog-page/section-additional.scss";
 @import "./blocks/catalog-page/section-offers.scss";
 @import "./blocks/catalog-page/section-address.scss";
+
+/* BLOCKS */
+@import "./blocks/header";
+@import "./blocks/footer.scss";
+@import "./blocks/page.scss";
+@import "./blocks/centering-wraper.scss";
+@import "./blocks/visually-hiden.scss";
+@import "./blocks/title.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/background-cat.scss";
+@import "./blocks/button.scss";
+@import "./blocks/section-address.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/more-product-card.scss";
+@import "./blocks/html-academy.scss";
+@import "./blocks/map.scss";

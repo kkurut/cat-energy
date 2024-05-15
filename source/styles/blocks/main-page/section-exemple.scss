@@ -1,6 +1,5 @@
 .example {
-  display: flex;
-  justify-content: center;
+  @include vrtcl-cntr-flx;
   padding: 25px 0 40px;
   background-color: $basic-light-gray;
 
@@ -25,26 +24,35 @@
   .example__info-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      min-height: 56px;
+      height: 72%;
+      border: 1px solid $basic-special-gray;
+      border-radius: 3px;
+    }
   }
 
   .example__info-text {
-    padding: 10px;
+    padding: 16px;
     min-width: 124px;
     min-height: 56px;
-    border: 2px solid $basic-special-gray;
-    border-radius: 3px;
     text-align: center;
     font-size: 24px;
     line-height: 24px;
   }
 
   .example__info-caption {
-    position: absolute;
-    width: 60%;
-    left: 50%;
-    bottom: -50%;
-    transform: translate(-50%, -60%);
+    max-width: 70%;
+    padding: 0 6px;
+    margin-top: -9px;
+    z-index: 1;
     background-color: $basic-light-gray;
     color: $basic-dark-gray;
     text-align: center;
@@ -95,6 +103,10 @@
       justify-content: space-between;
     }
 
+    .example__info-card::after {
+      min-height: 72px;
+    }
+
     .example__info-primary {
       margin: 0;
       gap: 43px;
@@ -108,8 +120,11 @@
     }
 
     .example__info-caption {
+      max-width: none;
+      padding: 0 10px;
       font-size: 14px;
       line-height: 14px;
+      background-color: $white;
     }
 
     .example__info-price {
@@ -142,6 +157,10 @@
     .example__info {
       display: flex;
       flex-direction: column;
+    }
+
+    .example__info-caption {
+      background-color: $basic-light-gray;
     }
 
     .example__info-primary {

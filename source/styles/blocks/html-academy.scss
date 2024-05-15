@@ -1,7 +1,7 @@
 .html-academy {
+  @include vrtcl-cntr-flx;
+  align-items: center;
   text-decoration: none;
-  display: flex;
-  justify-content: space-between;
 
   @media (min-width: 768px) {
     gap: 23px;
@@ -16,6 +16,18 @@
     mask-repeat: no-repeat;
     mask-size: 27px 34px;
     background-color: $basic-dark-gray3;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    @include link-bg;
   }
 
   .html-academy__text {

@@ -1,20 +1,8 @@
 .page-header {
+  @include vrtcl-cntr-flx;
   position: relative;
-  display: flex;
-  justify-content: center;
   min-height: 39px;
   background-color: $white;
-
-  //! шапка в каталоге
-  .page--catalog {
-    .page-header__list-link {
-      color: $black;
-    }
-
-    .page-header__list-item--active::after {
-      background-color: $basic-green;
-    }
-  }
 
   .centering-wraper {
     margin: 12px 20px;
@@ -76,6 +64,12 @@
     line-height: 20px;
     text-transform: uppercase;
     text-decoration: none;
+
+    &:active {
+      color: rgba($black, 0.5);
+
+      @include link-bg;
+    }
   }
 
   .page-header__burger-button {

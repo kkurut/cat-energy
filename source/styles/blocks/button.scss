@@ -25,4 +25,14 @@
     align-items: center;
     padding: 10px 25px;
   }
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    @include link-bg;
+  }
 }

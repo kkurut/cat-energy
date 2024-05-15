@@ -52,6 +52,7 @@
   }
 
   @media (min-width: 768px) {
+    position: relative;
     width: 324px;
     padding: 0 38px 40px;
     justify-content: center;
@@ -60,7 +61,17 @@
       "title"
       "about"
       "btn";
-    background: linear-gradient(to top, $basic-gray 84%, transparent 16%);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 84%;
+      background-color: $basic-gray;
+      z-index: -1;
+    }
 
     .product-card__image-container {
       width: 200px;

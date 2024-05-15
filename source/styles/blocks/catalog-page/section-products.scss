@@ -1,6 +1,5 @@
 .products {
-  display: flex;
-  justify-content: center;
+  @include vrtcl-cntr-flx;
 
   .products__cards {
     padding: 0;

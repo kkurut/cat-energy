@@ -1,6 +1,5 @@
 .additional {
-  display: flex;
-  justify-content: center;
+  @include vrtcl-cntr-flx;
   position: relative;
 
   .additional__title {
