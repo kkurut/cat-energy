@@ -7,3 +7,12 @@
     src: $font-src;
   }
 }
+
+@mixin link-bg () {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin vrtcl-cntr-flx {
+  display: flex;
+  justify-content: center;
+}

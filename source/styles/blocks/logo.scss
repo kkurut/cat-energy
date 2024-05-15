@@ -1,4 +1,14 @@
 .logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    @include link-bg;
+  }
+
   .logo__link {
     display: flex;
     align-items: center;
