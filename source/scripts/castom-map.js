@@ -1,3 +1,4 @@
+/* eslint-disable */
 ymaps.ready(function () {
   var myMap = new ymaps.Map(
       "map",
