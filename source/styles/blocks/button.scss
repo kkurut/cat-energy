@@ -1,4 +1,7 @@
 .button {
+  transition: all 0.3s;
+  font-family: "oswald", sans-serif;
+
   &--primary {
     border: none;
     color: $white;

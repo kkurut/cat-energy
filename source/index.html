@@ -11,8 +11,10 @@
   <link rel="apple-touch-icon" href="./favicons/favicon152.png">
   <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c5948696-c542-4bac-a474-f4c577937a1b" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7cb638cc-69c9-4f0e-962b-23540dbcf2e9"
+    defer="defer"></script>
   <script src="scripts/castom-map.js" defer></script>
+  <script src="scripts/before-after.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -21,16 +23,18 @@
       <nav class="page-header__nav">
         <a class="page-header__logo logo" href="./index.html">
           <picture>
-            <source class="logo__icon-desktop" media="(min-width:1440px)" width="70" height="59" type="image/svg+xml"
+            <source media="(min-width:1440px)" width="70" height="59" type="image/svg+xml"
               srcset="./images/logo-icon-desktop.svg">
-            <source class="logo__icon-tablet" media="(min-width:768px)" width="60" height="50" type="image/svg+xml"
+            <source media="(min-width:768px)" width="60" height="50" type="image/svg+xml"
               srcset="./images/logo-icon-tablet.svg">
             <img class="logo__icon-mobile" alt="логотип иконка" width="33" height="38"
               src="./images/logo-icon-mobile.svg">
           </picture>
           <picture>
-            <source class="logo__cat-energy" media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml"
-              srcset="./images/logo-cat-energy.svg">
+            <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml"
+              srcset="./images/logo-cat-energy-gray.svg">
+            <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml"
+              srcset="./images/logo-cat-energy-gray.svg">
             <img src="./images/logo-cat-energy.svg" alt="кэт енерджи" width="101" height="18">
           </picture>
         </a>
@@ -43,7 +47,7 @@
         <div class="page-header__nav-list">
           <ul class="page-header__list page-header__list--hide">
             <li class="page-header__list-item page-header__list-item--active">
-              <a class="page-header__list-link" href="./index.html">главная</a>
+              <a class="page-header__list-link page-header__list-link--pick" href="#">главная</a>
             </li>
             <li class="page-header__list-item">
               <a class="page-header__list-link" href="./catalog.html">Каталог продукции</a>
@@ -59,28 +63,24 @@
   <main class="page-main">
     <section class="promo background-cat background-cat--mobile">
       <div class="centering-wraper">
-        <div class="promo__info">
-          <h1 class="promo__title title title--primari">
-            Функциональное<br>
-            питание для котов
-          </h1>
-          <p class="promo__text">Занялся собой? Займись котом!</p>
-          <a class="promo__link button button--primary" href="#">подобрать программу</a>
-        </div>
+        <h1 class="promo__title title title--primari">
+          Функциональное<br>
+          питание для котов
+        </h1>
+        <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
-          <source class="promo__product-desktop" media="(min-width:1440px)" width="552" height="449" type="image/png"
-            srcset="
-                ./images/promo-product@1x.png 1x,
-                ./images/promo-product@2x.png 2x
+          <source media="(min-width:1440px)" width="552" height="449" type="image/png" srcset="
+                ./images/promo-product-desktop@1x.png 1x,
+                ./images/promo-product-desktop@2x.png 2x
               ">
-          <source class="promo__product-tablet" media="(min-width:768px)" width="709" type="image/png" height="609"
-            srcset="
-                ./images/promo-product@1x.png 1x,
-                ./images/promo-product@2x.png 2x
+          <source media="(min-width:768px)" width="709" type="image/png" height="609" srcset="
+                ./images/promo-product-tablet@1x.png 1x,
+                ./images/promo-product-tablet@2x.png 2x
               ">
-          <img class="promo__product-mobile" src="./images/promo-product@1x.png" alt="промо продукт кэт енерджи"
-            width="280" height="270" srcset="./images/promo-product@2x.png 2x">
+          <img class="promo__product" src="./images/promo-product-mobile@1x.png" alt="продукт кэт енерджи" width="280"
+            height="270" srcset="./images/promo-product-mobile@2x.png 2x">
         </picture>
+        <a class="promo__link button button--primary" href="#">подобрать программу</a>
       </div>
     </section>
     <section class="catalogs">
@@ -111,28 +111,32 @@
         <h2 class="how-work__title title title--primari">Как это работает</h2>
         <ul class="how-work__stages">
           <li class="how-work__stage how-work__stage--one">
-            <p class="how-work__stage-text">
+            <p class="how-work__stage-text how-work__stage-text--one">
               Функциональное питание содержит только полезные питательные
               вещества.
             </p>
+            <span class="how-work__stage-number how-work__stage-number--one">1</span>
           </li>
           <li class="how-work__stage how-work__stage--two">
-            <p class="how-work__stage-text">
+            <p class="how-work__stage-text how-work__stage-text--two">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
+            <span class="how-work__stage-number how-work__stage-number--two">2</span>
           </li>
           <li class="how-work__stage how-work__stage--three">
-            <p class="how-work__stage-text">
+            <p class="how-work__stage-text how-work__stage-text--three">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
+            <span class="how-work__stage-number how-work__stage-number--three">3</span>
           </li>
           <li class="how-work__stage how-work__stage--four">
-            <p class="how-work__stage-text">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего
+            <p class="how-work__stage-text how-work__stage-text--four">
+              Уже через месяц наслаждайтесь изменениями к&amp;лучшему вашего&amp;
               питомца!
             </p>
+            <span class="how-work__stage-number how-work__stage-number--four">4</span>
           </li>
         </ul>
       </div>
@@ -164,39 +168,39 @@
             </p>
           </div>
         </div>
-        <div class="example__cat">
+        <figure class="example__before-after before-after">
+          <figcaption class="visually-hidden">Интерактивный пример до и после, с фотографиями кота</figcaption>
           <picture>
-            <source media="(min-width:768px)" width="560" height="512" type="image/png" srcset="
-                  ./images/cat-before@1x.png 1x,
-                  ./images/cat-before@2x.png 2x
-                ">
-            <img class="example__cat-before" src="./images/cat-before@1x.png" alt="кошка до" width="280" height="256"
-              srcset="./images/cat-before@2x.png 2x">
+            <source width="560" height="512" media="(min-width: 768px)"
+              srcset="./images/cat-before@1x.png 1x, ./images/cat-before@2x.png 2x" type="image/png">
+            <img class="before-after__before" width="280" height="256" src="./images/cat-before@1x.png"
+              srcset="./images/cat-before@2x.png 2x" alt="Результат до, ленивый толстый кот" loading="lazy">
           </picture>
           <picture>
-            <source media="(min-width:768px)" width="560" height="512" type="image/png" srcset="
-                  ./images/cat-after@1x.png 1x,
-                  ./images/cat-after@2x.png 2x
-                ">
-            <img class="example__cat-after" src="./images/cat-after@1x.png" alt="кошка до" width="280" height="256"
-              srcset="./images/cat-after@2x.png 2x">
+            <source width="560" height="512" media="(min-width: 768px)"
+              srcset="./images/cat-after@1x.png 1x, ./images/cat-after@2x.png 2x" type="image/png">
+            <img class="before-after__after" width="280" height="256" src="./images/cat-after@1x.png"
+              srcset="./images/cat-after@2x.png 2x" alt="Результат после, активный здоровый кот" loading="lazy">
           </picture>
-        </div>
+          <div class="before-after__button-wrapper">
+            <button class="before-after__button" type="button">
+              <span class="visually-hidden">Перемещать ползунок</span>
+            </button>
+          </div>
+        </figure>
       </div>
     </section>
     <section class="address">
       <h3 class="visually-hidden">адрес</h3>
       <div class="centering-wraper">
-        <div class="address__info">
-          <p class="address__text">приглашаем к сотрудничеству дилеров!</p>
-          <address class="address__address">
-            <span>ул. Большая Конюшенная,</span>
-            <span>д. 19/8 Санкт-Петербург</span>
-          </address>
-        </div>
+        <p class="address__text">приглашаем <br> к сотрудничеству дилеров!</p>
+        <address class="address__address">
+          <span class="address__address-place">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="address__address-city">Санкт-Петербург</span>
+        </address>
       </div>
+      <div class="map" id="map"></div>
     </section>
-    <div class="map" id="map"></div>
   </main>
   <footer class="page-footer">
     <div class="centering-wraper">

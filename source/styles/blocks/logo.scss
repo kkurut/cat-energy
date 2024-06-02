@@ -1,4 +1,7 @@
 .logo {
+  transition: all 0.3s;
+  user-select: none;
+
   &:hover {
     opacity: 0.8;
   }
