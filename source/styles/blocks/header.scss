@@ -114,7 +114,10 @@
 @media (min-width: 768px) {
   .page-header {
     background: none;
-  }
+
+    .page-header__list--hide {
+      display: flex;
+    }
 
   .page-header__nav {
     display: flex;
