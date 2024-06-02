@@ -44,21 +44,20 @@
       position: absolute;
       right: 0;
       top: 0;
-      background-color: $background-green;
     }
 
     &--desktop::before {
-      background-color: $background-green;
+      background-color: rgba(105, 183, 56, 0.85);
       z-index: -1;
     }
 
     &--desktop::after {
       top: 0;
+      background-color: $background-green;
       background-image: url("../../images/main-back-cat@1x.jpg");
-      background-position: left center;
+      background-position: left top;
       background-repeat: no-repeat;
       background-size: cover;
-      background-color: $background-green;
       z-index: -2;
 
       @media (min-resolution: 2dppx) {

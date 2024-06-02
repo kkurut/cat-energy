@@ -6,145 +6,238 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    padding: 20px 0 21px;
+
+    @media (min-width: 768px) {
+      padding: 0 0 45px;
+      gap: 30px;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 79px 0 0;
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+}
+
+.catalogs__catalog {
+  background-color: $basic-gray;
+  display: grid;
+  grid-template-areas:
+    "title icon"
+    "text  icon"
+    "link  icon";
+
+  &--cat {
+    padding: 21px 20px;
   }
 
-  .catalogs__catalog {
-    padding: 21px 20px 18px;
-    background-color: $basic-gray;
-    display: grid;
-    grid-template-areas:
-      "title icon"
-      "text  icon"
-      "link  icon";
+  &--strong-cat {
+    padding: 22px 20px;
+  }
+}
+
+.catalogs__title {
+  margin: 0 0 23px;
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  &--cat::before {
+    margin-right: 20px;
+    content: "";
+    width: 50px;
+    height: 53px;
+    display: block;
+    background-image: url("../../icons/cat-shadow.svg");
+    background-repeat: no-repeat;
   }
 
+  &--strong-cat::before {
+    transform: translate(-8px, 2px);
+    margin-right: 4px;
+    content: "";
+    width: 67px;
+    height: 50px;
+    display: block;
+    background-image: url("../../icons/tiger-shadow.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.catalogs__text {
+  padding: 0 0 23px;
+  margin: 0 0 19px;
+  position: relative;
+  grid-area: text;
+  color: $basic-dark-gray;
+  font-family: "lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: $basic-light-gray3;
+  }
+}
+
+.catalogs__link {
+  grid-area: link;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 60%;
+  color: $black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @include link-bg;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 12px;
+    background-image: url("../../icons/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: -8px 50%;
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    background-position: 0 50%;
+  }
+}
+
+//! планшетная и компьютерная версия
+@media (min-width: 768px) {
   .catalogs__title {
-    grid-area: title;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 37px;
+    font-size: 36px;
+    line-height: 36px;
     text-transform: uppercase;
+    margin-bottom: 24px;
 
     &--cat::before {
-      content: "";
-      width: 50px;
-      height: 53px;
-      display: block;
-      background: url("../../icons/cat-shadow.svg") no-repeat;
+      display: none;
     }
 
     &--strong-cat::before {
-      content: "";
-      width: 67px;
-      height: 50px;
-      display: block;
-      background: url("../../icons/tiger-shadow.svg") no-repeat;
+      display: none;
     }
   }
 
   .catalogs__text {
-    grid-area: text;
-    color: $basic-dark-gray;
-    font-family: "lato", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    margin-bottom: 52px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .catalogs__link {
-    grid-area: link;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: $black;
-    text-decoration: none;
-    text-align: center;
-    line-height: 16px;
-    text-transform: uppercase;
+    font-size: 20px;
+    line-height: normal;
+    gap: 24px;
+  }
 
-    &::after {
+  .catalogs__catalog {
+    padding: 75px 63px 57px 53px;
+
+    &--cat::after {
+      margin: 4px 0 0 50px;
+      grid-area: icon;
       content: "";
+      width: 200px;
+      height: 211px;
       display: block;
-      width: 32px;
-      height: 10px;
-      mask-image: url("../../icons/icon-arrow.svg");
-      mask-repeat: no-repeat;
-      background-color: $black;
+      background-image: url("../../icons/cat-shadow.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--strong-cat {
+      padding: 77px 29px 57px 53px;
+    }
+
+    &--strong-cat::after {
+      grid-area: icon;
+      content: "";
+      width: 268px;
+      height: 200px;
+      margin: 14px 0 0 15px;
+      background-image: url("../../icons/tiger-shadow.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalogs {
+    .centering-wraper {
+      flex-direction: row;
+      gap: 80px;
+      padding-bottom: 75px;
     }
   }
 
-  //! планшетная и компьютерная версия
-  @media (min-width: 768px) {
-    .catalogs__title {
-      font-size: 36px;
-      line-height: 36px;
-      text-transform: uppercase;
-
-      &--cat::before {
-        display: none;
-      }
-
-      &--strong-cat::before {
-        display: none;
-      }
+  .catalogs__catalog {
+    &--cat {
+      padding: 41px 61px 55px 52px;
+      width: 50%;
     }
 
-    .catalogs__text {
-      font-size: 16px;
-      line-height: 24px;
+    &--strong-cat {
+      padding: 45px 61px 55px 52px;
+      width: 50%;
     }
 
-    .catalogs__link {
-      font-size: 20px;
-      line-height: normal;
-    }
-
-    .catalogs__catalog {
-      &--cat::after {
-        grid-area: icon;
-        content: "";
-        width: 200px;
-        height: 211px;
-        display: block;
-        background: url("../../icons/cat-shadow.svg") no-repeat;
-      }
-
-      &--strong-cat::after {
-        grid-area: icon;
-        content: "";
-        width: 268px;
-        height: 200px;
-        display: block;
-        background: url("../../icons/tiger-shadow.svg") no-repeat;
-      }
+    &--cat::after,
+    &--strong-cat::after {
+      display: none;
     }
   }
 
-  @media (min-width: 1440px) {
-    .catalogs__catalog {
-      &--cat::after,
-      &--strong-cat::after {
-        display: none;
-      }
+  .catalogs__title {
+    margin-bottom: 39px;
+
+    &--cat::before {
+      margin-right: 61px;
+      content: "";
+      width: 100px;
+      height: 106px;
+      display: block;
+      background-image: url("../../icons/cat-shadow.svg");
+      background-repeat: no-repeat;
     }
 
-    .catalogs__title {
-      &--cat::before {
-        content: "";
-        width: 100px;
-        height: 106px;
-        display: block;
-        background: url("../../icons/cat-shadow.svg") no-repeat;
-      }
-
-      &--strong-cat::before {
-        content: "";
-        width: 134px;
-        height: 100px;
-        display: block;
-        background: url("../../icons/tiger-shadow.svg") no-repeat;
-      }
+    &--strong-cat::before {
+      margin: 0 39px 0 -11px;
+      content: "";
+      width: 134px;
+      height: 100px;
+      display: block;
+      background-image: url("../../icons/tiger-shadow-desktop.svg");
+      background-repeat: no-repeat;
     }
+  }
+
+  .catalogs__text {
+    margin-bottom: 27px;
   }
 }

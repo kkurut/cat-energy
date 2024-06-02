@@ -1,0 +1,88 @@
+.before-after {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.before-after__before {
+  clip-path: inset(0 50% 0 0);
+}
+
+.before-after__after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  clip-path: inset(0 0 0 50%);
+}
+
+.before-after__button-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 99%;
+  pointer-events: none;
+}
+
+.before-after__button {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  background-color: $basic-dark-gray3;
+  border: none;
+  border-radius: 4px;
+  cursor: ew-resize;
+  pointer-events: all;
+  z-index: 2;
+  flex: 0 0 4px;
+  padding: 0;
+}
+
+.before-after__button::before,
+.before-after__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.before-after__button::before {
+  background-color: $white;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.before-after__button::after {
+  background-color: $basic-dark-gray3;
+  mask-image: url("../../icons/thumb-icon.svg");
+  mask-size: cover;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.before-after__button:hover,
+.before-after__button:focus-visible,
+.before-after__button:hover::after,
+.before-after__button:focus-visible::after {
+  background-color: $basic-green-2;
+  transition: all 0.3s;
+}
+
+.before-after__button:active .before-after__button:active::after {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .before-after {
+    width: 560px;
+  }
+}
