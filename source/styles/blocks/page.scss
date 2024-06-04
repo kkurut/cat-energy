@@ -19,6 +19,11 @@
     color: $black;
   }
 
+  .page-header::after {
+    display: none;
+  }
+
+
   .page-header__list-item--active::after {
     background-color: $basic-green;
   }

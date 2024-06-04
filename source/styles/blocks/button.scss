@@ -1,8 +1,12 @@
 .button {
   transition: all 0.3s;
-  font-family: "oswald", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
 
   &--primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
     border: none;
     color: $white;
     text-align: center;
@@ -10,9 +14,6 @@
     line-height: 20px;
     text-transform: uppercase;
     background-color: $basic-green;
-    display: flex;
-    justify-content: center;
-    padding: 10px 25px;
   }
 
   &--secondary {

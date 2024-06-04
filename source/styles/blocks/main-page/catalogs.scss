@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  .centering-wraper {
+  .centering-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -77,7 +77,7 @@
   position: relative;
   grid-area: text;
   color: $basic-dark-gray;
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 
@@ -154,7 +154,7 @@
   .catalogs__link {
     font-size: 20px;
     line-height: normal;
-    gap: 24px;
+    gap: 26px;
   }
 
   .catalogs__catalog {
@@ -189,7 +189,7 @@
 
 @media (min-width: 1440px) {
   .catalogs {
-    .centering-wraper {
+    .centering-wrapper {
       flex-direction: row;
       gap: 80px;
       padding-bottom: 75px;

@@ -10,7 +10,7 @@
 
 .example__text {
   color: $basic-dark-gray;
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   margin: 0 0 20px;
@@ -63,7 +63,7 @@
   background-color: $basic-light-gray;
   color: $basic-dark-gray;
   text-align: center;
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 100%;
 }
@@ -163,7 +163,7 @@
   .example {
     padding-bottom: 75px;
 
-    .centering-wraper {
+    .centering-wrapper {
       display: flex;
       justify-content: space-between;
     }

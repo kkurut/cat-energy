@@ -1,7 +1,7 @@
 .promo {
   @include vrtcl-cntr-flx;
 
-  .centering-wraper {
+  .centering-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,11 +40,15 @@
   text-decoration: none;
 }
 
+.promo__product {
+  user-select: none;
+}
+
 //! планшетная версия
 
 @media (min-width: 768px) {
   .promo {
-    .centering-wraper {
+    .centering-wrapper {
       align-items: flex-start;
     }
   }
@@ -80,7 +84,7 @@
 
 @media (min-width: 1440px) {
   .promo {
-    .centering-wraper {
+    .centering-wrapper {
       display: grid;
       grid-template-rows: auto auto 1fr;
       grid-template-areas:
