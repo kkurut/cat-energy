@@ -4,7 +4,7 @@
   min-height: 39px;
   background-color: $white;
 
-  .centering-wraper {
+  .centering-wrapper {
     margin: 12px 20px;
 
     @media (min-width: 768px) and (max-width: 1440px) {
@@ -31,6 +31,7 @@
   grid-area: logo;
   width: 98%;
   display: flex;
+  align-self: start;
   align-items: center;
   justify-content: space-between;
 }
@@ -79,6 +80,17 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.3s;
+
+  @include link-bg;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__burger-button {
@@ -114,6 +126,10 @@
 @media (min-width: 768px) {
   .page-header {
     background: none;
+
+    &::after {
+      display: none;
+    }
   }
 
   .page-header__nav {
@@ -183,6 +199,12 @@
 }
 
 @media (min-width: 1440px) {
+  .page-header {
+    &::after {
+      display: block;
+    }
+  }
+
   .page-header__list {
     margin-right: 2px;
     gap: 33px;

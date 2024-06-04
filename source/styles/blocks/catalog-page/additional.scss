@@ -1,0 +1,283 @@
+.additional {
+  @include vrtcl-cntr-flx;
+  position: relative;
+
+  .centering-wrapper {
+    padding-bottom: 40px;
+  }
+}
+
+.additional__products {
+  margin: 35px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.additional__product {
+  padding: 13px 0 19px;
+  position: relative;
+
+  &:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $basic-special-gray;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $basic-special-gray;
+  }
+}
+
+.additional__product-title {
+  margin: 0;
+  color: $basic-dark-gray2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional__product-about {
+  display: flex;
+  justify-content: space-between;
+  color: $basic-dark-gray;
+  font-family: "lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.additional__product-buy {
+  width: 100%;
+}
+
+.additional__promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 290px;
+  background-image: url("../../images/gift-background@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    z-index: -1;
+    background-color: $background-green;
+  }
+}
+
+.additional__promo-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 59px 0 0;
+  margin: 0;
+  max-width: 60%;
+  color: $white;
+  text-align: center;
+  font-family: "lato", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.additional__promo-card-text-icon::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+  background-image: url("../../icons/icon-gift.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .additional {
+    .centering-wrapper {
+      padding-bottom: 80px;
+    }
+  }
+
+  .additional__products {
+    margin: 80px 0 70px;
+  }
+
+  .additional__product {
+    border-right: 1px solid $basic-special-gray;
+    border-left: 1px solid $basic-special-gray;
+    padding: 26px 38px 28px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title about"
+      "buy   buy";
+  }
+
+  .additional__product-title {
+    font-size: 20px;
+    line-height: 20px;
+    grid-area: title;
+    margin-bottom: 25px;
+  }
+
+  .additional__product-about {
+    padding: 3px 2px 0;
+    gap: 50px;
+    grid-area: about;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+
+    &--special {
+      gap: 59px;
+    }
+  }
+
+  .additional__product-buy {
+    grid-area: buy;
+  }
+
+  .additional__promo-card {
+    min-height: 200px;
+    height: min-content;
+    flex-direction: row;
+    align-items: normal;
+    background-image: url("../../../images/gift-background-tablet@1x.png");
+  }
+
+  .additional__promo-card-text {
+    flex-direction: row;
+    max-width: none;
+    width: 100%;
+    padding: 57px 101px 56px 77px;
+  }
+
+  .additional__promo-card-text-icon {
+    margin-right: auto;
+
+    &::before {
+      width: 82px;
+      height: 85px;
+    }
+  }
+
+  .additional__promo-card-text-caption {
+    width: 35%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .additional {
+    .centering-wrapper {
+      display: grid;
+      grid-template-areas:
+        "title    title"
+        "products promo";
+      grid-template-columns: 1fr auto;
+      padding-bottom: 96px;
+    }
+  }
+
+  .additional__title {
+    grid-area: title;
+  }
+
+  .additional__products {
+    grid-area: products;
+    margin: 80px 81px 0 0;
+  }
+
+
+  .additional__product {
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 17px;
+  }
+
+  .additional__product-title {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .additional__product-about {
+    min-width: 285px;
+    width: min-content;
+    margin: 5px 40px 0 0;
+    padding: 0;
+
+    &--special {
+      margin-right: 50px;
+      min-width: 275px;
+    }
+  }
+
+  .additional__product-buy {
+    max-width: 244px;
+  }
+
+  .additional__promo-card {
+    grid-area: promo;
+    margin-top: 80px;
+    width: 245px;
+    flex-direction: column;
+    align-items: center;
+    min-height: 288px;
+    background-image: url("../../images/gift-background@1x.png");
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      top: 0;
+      z-index: -1;
+      background-color: $background-green;
+    }
+  }
+
+  .additional__promo-card-text {
+    flex-direction: column;
+    gap: 46px;
+    padding: 56px 0 40px;
+    max-width: 70%;
+  }
+
+  .additional__promo-card-text-icon {
+    margin: 0;
+
+    &::before {
+      width: 80px;
+      height: 83px;
+    }
+  }
+
+  .additional__promo-card-text-caption {
+    width: 100%;
+    text-align: center;
+  }
+}

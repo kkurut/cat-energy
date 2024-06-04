@@ -19,7 +19,7 @@
 
 <body class="page__body">
   <header class="page-header background-cat background-cat--desktop">
-    <div class="centering-wraper">
+    <div class="centering-wrapper">
       <nav class="page-header__nav">
         <a class="page-header__logo logo" href="./index.html">
           <picture>
@@ -62,13 +62,25 @@
   </header>
   <main class="page-main">
     <section class="promo background-cat background-cat--mobile">
-      <div class="centering-wraper">
+      <div class="centering-wrapper">
         <h1 class="promo__title title title--primari">
           Функциональное<br>
           питание для котов
         </h1>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
+          <source media="(min-width:1440px)" width="552" height="449" type="image/webp" srcset="
+                ./images/promo-product-desktop@1x.webp 1x,
+                ./images/promo-product-desktop@2x.webp 2x
+              ">
+          <source media="(min-width:768px)" width="709" type="image/webp" height="609" srcset="
+                ./images/promo-product-tablet@1x.webp 1x,
+                ./images/promo-product-tablet@2x.webp 2x
+              ">
+          <source width="280" type="image/webp" height="270" srcset="
+                ./images/promo-product-mobile@1x.webp 1x,
+                ./images/promo-product-mobile@2x.webp 2x
+              ">
           <source media="(min-width:1440px)" width="552" height="449" type="image/png" srcset="
                 ./images/promo-product-desktop@1x.png 1x,
                 ./images/promo-product-desktop@2x.png 2x
@@ -84,7 +96,7 @@
       </div>
     </section>
     <section class="catalogs">
-      <div class="centering-wraper">
+      <div class="centering-wrapper">
         <div class="catalogs__catalog catalogs__catalog--cat">
           <h3 class="catalogs__title catalogs__title--cat">похудение</h3>
           <p class="catalogs__text">
@@ -107,7 +119,7 @@
       </div>
     </section>
     <section class="how-work">
-      <div class="centering-wraper">
+      <div class="centering-wrapper">
         <h2 class="how-work__title title title--primari">Как это работает</h2>
         <ul class="how-work__stages">
           <li class="how-work__stage how-work__stage--one">
@@ -141,7 +153,7 @@
       </div>
     </section>
     <section class="example">
-      <div class="centering-wraper">
+      <div class="centering-wrapper">
         <div class="example__caption">
           <h2 class="example__title title title--primari">Живой пример</h2>
           <p class="example__text">
@@ -171,13 +183,19 @@
           <figcaption class="visually-hidden">Интерактивный пример до и после, с фотографиями кота</figcaption>
           <picture>
             <source width="560" height="512" media="(min-width: 768px)"
+              srcset="./images/cat-before@1x.webp 1x, ./images/cat-before@2x.webp 2x" type="image/webp">
+            <source width="280" height="256" srcset="./images/cat-before@1x.webp 1x, ./images/cat-before@2x.webp 2x"
+              type="image/webp">
+            <source width="560" height="512" media="(min-width: 768px)"
               srcset="./images/cat-before@1x.png 1x, ./images/cat-before@2x.png 2x" type="image/png">
             <img class="before-after__before" width="280" height="256" src="./images/cat-before@1x.png"
               srcset="./images/cat-before@2x.png 2x" alt="Результат до, ленивый толстый кот" loading="lazy">
           </picture>
           <picture>
             <source width="560" height="512" media="(min-width: 768px)"
-              srcset="./images/cat-after@1x.png 1x, ./images/cat-after@2x.png 2x" type="image/png">
+              srcset="./images/cat-after@1x.webp 1x, ./images/cat-after@2x.webp 2x" type="image/webp">
+            <source  width="280" height="256"
+              srcset="./images/cat-after@1x.webp 1x, ./images/cat-after@2x.webp 2x" type="image/webp">
             <img class="before-after__after" width="280" height="256" src="./images/cat-after@1x.png"
               srcset="./images/cat-after@2x.png 2x" alt="Результат после, активный здоровый кот" loading="lazy">
           </picture>
@@ -191,7 +209,7 @@
     </section>
     <section class="address">
       <h3 class="visually-hidden">адрес</h3>
-      <div class="centering-wraper">
+      <div class="centering-wrapper">
         <p class="address__text">приглашаем <br> к сотрудничеству дилеров!</p>
         <address class="address__address">
           <span class="address__address-place">ул. Большая Конюшенная, д. 19/8</span>
@@ -202,12 +220,12 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="centering-wraper">
+    <div class="centering-wrapper">
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <a class="page-footer__logo logo" href="./index.html">
             <img class="logo__cat-energy" src="./images/logo-cat-energy.svg" alt="логотип cat energy" width="128"
-              height="24">
+              height="24" loading="lazy">
             <span class="visually-hidden">логотип cat energy</span>
           </a>
         </li>

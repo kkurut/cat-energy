@@ -1,6 +1,14 @@
 .products {
   @include vrtcl-cntr-flx;
-  padding: 25px 0 0;
+  padding: 24px 0;
+
+  @media (min-width: 768px) {
+    padding: 62px 0 74px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 71px 0;
+  }
 }
 
 .products__cards {
@@ -14,28 +22,20 @@
 }
 
 @media (min-width: 768px) {
-  .products {
-    padding-top: 62px;
-  }
-
   .products__title {
-    margin-bottom: 95px;
+    margin-bottom: 84px;
   }
 
   .products__cards {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 71px 60px;
+    gap: 60px;
   }
 }
 
 @media (min-width: 1440px) {
-  .products {
-    padding-top: 74px;
-  }
-
   .products__cards {
-    gap: 80px;
+    gap: 63px 80px;
   }
 }

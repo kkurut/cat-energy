@@ -7,10 +7,48 @@
     line-height: 40px;
 
     @media (min-width: 768px) {
-      & {
-        font-size: 60px;
-        line-height: 60px;
-      }
+      font-size: 60px;
+      line-height: 60px;
     }
+  }
+}
+
+.title--secondary {
+  display: flex;
+  padding-right: 40px;
+  align-items: center;
+  width: min-content;
+  background-color: $white;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    width: 90%;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: -40px;
+    font-size: 40px;
+    line-height: 40px;
   }
 }
