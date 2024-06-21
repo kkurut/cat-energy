@@ -8,7 +8,7 @@ ymaps.ready(() => {
     searchControlProvider: 'yandex#search'
   });
 
-  const iconImageHref = 'https://s3-alpha-sig.figma.com/img/a4c8/ba9e/0f1271ca019880ddca20a339944960cc?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QNBg7LruNEn~nIRLgzUDa73gfAaTOQjP~sZzyDVXnjPmNvCSPw~cPVxHt9JjHm-AQ9biLBCvlryJ~r41xtSFW-s2cFUy1U4nQzp3TC7XvAHS8jy6a4WDDG~1mVM80tq4h8zjla2d7rz1crhqmd5TKgOlWvtQ7mFyPZWe524qdczqJ42yJWB9pExrxGXPoGpfdaaGCL6MlF9m~tt5WvqEpQ8Hp2qY7zWnkmasr86hAxcses5Lu5QYIlEjX8sSnxJRO0lOKh80YVIVOVZcj5k4bBYAAVKST6lpZqIuIRiUcwCpZOAYsjnoLeA7-rkMHNifFlyikR5SGrZ-6QFiUXKc6Q__';
+  const iconImageHref = '../images/map-cat.png';
 
   const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     hintContent: 'Собственный значок метки',
