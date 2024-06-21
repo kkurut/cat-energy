@@ -18,7 +18,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header background-cat background-cat--desktop">
+  <header class="page-header background-cat background-cat--desktop" data-test="header">
     <div class="centering-wrapper">
       <nav class="page-header__nav">
         <a class="page-header__logo logo" href="./index.html">
@@ -61,7 +61,7 @@
     </div>
   </header>
   <main class="page-main">
-    <section class="promo background-cat background-cat--mobile">
+    <section class="promo background-cat background-cat--mobile" data-test="hero">
       <div class="centering-wrapper">
         <h1 class="promo__title title title--primari">
           Функциональное<br>
@@ -95,7 +95,7 @@
         <a class="promo__link button button--primary" href="#">подобрать программу</a>
       </div>
     </section>
-    <section class="catalogs">
+    <section class="catalogs" data-test="programs">
       <div class="centering-wrapper">
         <div class="catalogs__catalog catalogs__catalog--cat">
           <h3 class="catalogs__title catalogs__title--cat">похудение</h3>
@@ -118,7 +118,7 @@
         </div>
       </div>
     </section>
-    <section class="how-work">
+    <section class="how-work" data-test="features">
       <div class="centering-wrapper">
         <h2 class="how-work__title title title--primari">Как это работает</h2>
         <ul class="how-work__stages">
@@ -152,7 +152,7 @@
         </ul>
       </div>
     </section>
-    <section class="example">
+    <section class="example" data-test="proof">
       <div class="centering-wrapper">
         <div class="example__caption">
           <h2 class="example__title title title--primari">Живой пример</h2>
@@ -207,7 +207,7 @@
         </figure>
       </div>
     </section>
-    <section class="address">
+    <section class="address" data-test="contacts">
       <h3 class="visually-hidden">адрес</h3>
       <div class="centering-wrapper">
         <p class="address__text">приглашаем <br> к сотрудничеству дилеров!</p>
@@ -219,7 +219,7 @@
       <div class="map" id="map"></div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer" data-test="footer">
     <div class="centering-wrapper">
       <ul class="page-footer__list">
         <li class="page-footer__item">
